@@ -1,12 +1,11 @@
 //chKxItwBidbREsQv
 // rafaelmevn: LmJCiMJll3vaUC2n3
+const dotenv = require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const app = express();
 
-const corsOption = {
-    origin: "http://localhost:3000"
-}
+
 app.use(cors());
 app.use(express.json())
 
