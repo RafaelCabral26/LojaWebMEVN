@@ -1,6 +1,6 @@
 const mongoose =  require("mongoose")
 
-async function main() {
+async function conn() {
 
     try {
         mongoose.set("strictQuery", true)
@@ -11,4 +11,4 @@ async function main() {
         console.log(error);
     }
 }
-module.exports = main
+module.exports = conn

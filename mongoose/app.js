@@ -3,8 +3,12 @@
 const dotenv = require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
-const app = express();
 
+// import { config } from "dotenv";
+// import express from "express" ;
+// import cors from "cors";
+// import mongoose from "mongoose";
+const app = express();
 
 app.use(cors());
 app.use(express.urlencoded({ extended:true }))
