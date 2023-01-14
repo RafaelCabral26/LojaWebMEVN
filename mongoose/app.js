@@ -7,21 +7,23 @@ const app = express();
 
 
 app.use(cors());
+app.use(express.urlencoded({ extended:true }))
 app.use(express.json())
 
 
-const conn = require("../db/connmong");
+const conn = require("./db/connmong");
 conn();
 
 app.get('/', (req, res) => res.send('App is working'))
 
-const routes =  require("./apiroutes/routes")
+const routes =  require("./apiroutes/routes");
+const { application } = require("express");
 app.use("/api", routes);
 
 
 
 
-const PORT = process.env.MONGODB_URL || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT,function() {
     console.log(`Server rodando na porta: ${PORT}`)
