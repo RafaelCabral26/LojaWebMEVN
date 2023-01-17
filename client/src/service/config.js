@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const configure = {
-    local: "http://localhost:8000"
+    local: process.env.PUBLIC_API_URL
     //local: location.origin.replace(location.port, "") + "/api/"
     //local:"http://backvercel-rust.vercel.app/"
     //local: "http://rafaelcabral26.gratisphphost.info/api/"
