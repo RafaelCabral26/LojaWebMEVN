@@ -39,5 +39,5 @@ app.get("/usuario/list", (req, res) => userController.getAll(req,res))
 
 const port = process.env.PORT || 8000
 app.listen(port, () => {
-    console.log("Escutando porta " + port)
+    console.log("Escutando porta")
 })
