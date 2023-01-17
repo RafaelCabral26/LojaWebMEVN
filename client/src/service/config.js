@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const configure = {
-    //local: "http://localhost:3000/api/"
+    local: "http://localhost:8000"
     //local: location.origin.replace(location.port, "") + "/api/"
-    local:MONGODB_URI
+    //local:"http://backvercel-rust.vercel.app/"
     //local: "http://rafaelcabral26.gratisphphost.info/api/"
 };
 

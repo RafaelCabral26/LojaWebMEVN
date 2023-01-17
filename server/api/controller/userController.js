@@ -1,8 +1,9 @@
-const { User } = require("../Schemas/userSchema");
+const { User } = require("../models/userModel") 
+//import User  from "../models/userModel.js";
 
 const userController = {
 
-    create: async(req,res) => { 
+    add: async(req,res) => { 
         try{
         const user = {
             id_usuario: req.body.id_usuario,
@@ -19,9 +20,18 @@ const userController = {
     }catch(err) {
         console.log(`Erro userrouter:${err}`)
       }
-    }
+    },
+    getAll: async (req, res) => {
+        try {
+          const users = await User.find();
+          res.json(users);
+        } catch (error) {
+          console.log(error);
+        }
+      }
 
 
 }
 
 module.exports = userController
+

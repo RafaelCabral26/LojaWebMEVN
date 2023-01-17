@@ -1,3 +1,7 @@
+.vercel
+.env
+node_modules
+request.rest
 logs
 *.log
 npm-debug.log*

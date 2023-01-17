@@ -22,7 +22,7 @@ export default {
     <h2>Cadastro</h2>
         <div class="form-group">
             <label for="helpName">Nome</label>
-            <input type="text" name="nome" class="form-control" placeholder="" aria-describedby="helpName" v-model="usuario.nome" />
+            <input type="text" name="nome" class="form-control" placeholder="" aria-describedby="helpName" v-model="usuario.nome"/>
             <small id="helpName" class="text-muted"></small>
         </div>
 
