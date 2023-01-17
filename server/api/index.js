@@ -33,6 +33,7 @@ app.use(cors())
 app.get("/", (req,res) => {
     return res.status(201).json({msg: "GET com sucesso"})
 })
+app.get('/hello', (_, res) => res.send('Hello from Rafael'))
 app.post("/usuario/add", (req,res) => userController.add(req,res))
 app.get("/usuario/list", (req, res) => userController.getAll(req,res))
 
