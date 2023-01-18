@@ -1,14 +1,14 @@
 import axios from 'axios';
-
+import dotenv from "dotenv"
+const url = import.meta.env.VITE_APP_URL
+const envurl = import.meta.env.VITE_APP_URL
 const configure = {
-    local: "https://server-render-ltql.onrender.com/"
+    local:import.meta.env.VITE_APP_URL
     //local: location.origin.replace(location.port, "") + "/api/"
-    //local:"http://backvercel-rust.vercel.app/"
-    //local: "http://rafaelcabral26.gratisphphost.info/api/"
 };
 
 const http = axios.create({
-    baseURL: configure.local,
+    baseURL: envurl,
     headers: {
         'Access-Control-Allow-Origin': '*',
         //'Access-Control-Allow-Methods': '*',

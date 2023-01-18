@@ -11,14 +11,13 @@ const router = express.Router()
 const dotenv = require("dotenv")
 const cors = require("cors")
 const userController = require("./controller/userController")
-
 const app = express();
 dotenv.config();
 async function conn() {
-
+    
     try {
         mongoose.set("strictQuery", true)
-
+        
         await mongoose.connect(process.env.MONGODB_URI);
         console.log("Conectado ao BD")
     }catch(error) {
